@@ -1,0 +1,30 @@
+# Runtime dependencies for Autherius and the Maigret username-search engine.
+# Install the local project after these packages with: pip install -e .
+# SpiderFoot uses its own isolated requirements file:
+# integrations/spiderfoot/requirements.txt
+
+aiodns>=3,<5
+aiohttp>=3.12.14,<4
+aiohttp-socks>=0.10.1,<0.13.0
+certifi>=2025.6.15,<2027.0.0
+colorama>=0.4.6,<0.5.0
+curl-cffi>=0.14,<1.0
+Flask[async]>=3.1.1,<4.0.0
+html5lib>=1.1,<2.0
+Jinja2>=3.1.6,<4.0.0
+lxml>=6.0.2,<7.0.0
+MarkupSafe>=3.0.2,<4.0.0
+networkx>=2.6.3,<3.0.0
+platformdirs>=4.3.8,<5.0.0
+pycountry>=24.6.1,<27.0.0
+pyvis>=0.3.2,<0.4.0
+PySocks>=1.7.1,<2.0.0
+python-dateutil>=2.8.1
+reportlab>=4.4.3,<6.0.0
+requests>=2.32.4,<3.0.0
+socid-extractor>=0.1.1,<0.2.0
+soupsieve>=2.6,<3.0
+typing-extensions>=4.14.1,<5.0.0
+XMind>=1.2.0,<2.0.0
+yarl>=1.20.1,<2.0.0
+alive-progress>=3.2.0,<4.0.0

@@ -1,6 +1,14 @@
 MIT License
 
-Copyright (c) 2020-2026 Soxoj
+Copyright (c) 2026 Oleh Koliadiuk (Autherius original contributions)
+Copyright (c) 2020-2026 Soxoj (Maigret original work)
+
+Autherius is based on Maigret (https://github.com/soxoj/maigret) and includes
+SpiderFoot (https://github.com/smicallef/spiderfoot). The copyright in original
+Autherius branding, launcher, and modifications belongs to Oleh Koliadiuk.
+Copyright in Maigret and SpiderFoot code remains with their respective holders;
+see integrations/spiderfoot/LICENSE for SpiderFoot's original license notice.
+This notice does not transfer or replace those rights.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -11,13 +11,11 @@ try:
     from .checking import maigret as search
 except ImportError as e:
     raise ImportError(
-        "Missing required dependency while starting Maigret.\n\n"
-        "If installed from PyPI:\n"
-        "    pip install -U maigret\n\n"
-        "If running from a cloned repository:\n"
-        "    pip install -e .\n\n"
-        "Then run Maigret as:\n"
-        "    python -m maigret <username>"
+        "Missing required dependency while starting Autherius.\n\n"
+        "If running from this repository, install the project dependencies:\n"
+        "    poetry install\n\n"
+        "Then run Autherius as:\n"
+        "    poetry run autherius <username>"
     ) from e
 from .maigret import main as cli
 from .sites import MaigretEngine, MaigretSite, MaigretDatabase

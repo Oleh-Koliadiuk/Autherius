@@ -3,15 +3,16 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "maigret"
-version = "0.6.6"
-description = "🕵️‍♂️ Collect a dossier on a person by username from thousands of sites."
-authors = ["Soxoj <soxoj@protonmail.com>"]
+name = "autherius"
+version = "0.2.1"
+description = "Terminal OSINT searches powered by Maigret and SpiderFoot."
+authors = ["Oleh Koliadiuk"]
+packages = [{ include = "autherius" }, { include = "maigret" }]
 readme = "README.md"
 license = "MIT License"
-homepage = "https://pypi.org/project/maigret"
-documentation = "https://maigret.readthedocs.io"
-repository = "https://github.com/soxoj/maigret"
+homepage = "https://github.com/Oleh-Koliadiuk/Autherius"
+documentation = "https://github.com/Oleh-Koliadiuk/Autherius#readme"
+repository = "https://github.com/Oleh-Koliadiuk/Autherius"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Programming Language :: Python :: 3",
@@ -27,7 +28,7 @@ classifiers = [
 ]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/soxoj/maigret/issues"
+"Bug Tracker" = "https://github.com/Oleh-Koliadiuk/Autherius/issues"
 "Funding" = "https://www.patreon.com/soxoj"
 
 [tool.poetry.dependencies]
@@ -97,5 +98,5 @@ coverage = "^7.9.2"
 black = ">=25.1,<27.0"
 
 [tool.poetry.scripts]
-# Run with: poetry run maigret <username>
-maigret = "maigret.maigret:run"
+# Run with: poetry run autherius
+autherius = "autherius.cli:run"

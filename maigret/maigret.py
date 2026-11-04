@@ -128,9 +128,9 @@ def setup_arguments_parser(settings: Settings):
 
     parser = ArgumentParser(
         formatter_class=RawDescriptionHelpFormatter,
-        description=f"Maigret v{__version__}\n"
-        "Documentation: https://maigret.readthedocs.io/\n"
-        "All settings are also configurable through files, see docs.",
+        description=f"Autherius v0.2.1 (powered by Maigret {__version__})\n"
+        "Username-based OSINT account discovery.\n"
+        "Maigret documentation: https://maigret.readthedocs.io/",
     )
     parser.add_argument(
         "username",
@@ -1189,7 +1189,7 @@ def run():
             loop = asyncio.get_event_loop()
             loop.run_until_complete(main())
     except KeyboardInterrupt:
-        print('Maigret is interrupted.')
+        print('Autherius is interrupted.')
         sys.exit(1)
 
 
