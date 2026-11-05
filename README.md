@@ -49,7 +49,17 @@ Start the interactive menu:
 poetry run autherius
 ```
 
-Select options `1` through `4` from the menu and then enter the requested search term. Press `Q` to quit. Autherius does not start a search until you select an option and enter a target. For phone searches, enter an international number beginning with `+`, such as `+380501234567`.
+Select options `1` through `4` from the menu and then enter the requested search term. At a target prompt, enter `B` to return to the menu. Press `Q` in the main menu to quit. Autherius does not start a search until you select an option and enter a target. For phone searches, enter an international number beginning with `+`, such as `+380501234567`.
+
+SpiderFoot stores its database, cache, and logs in the current user's application data directory. On macOS, this is `~/Library/Application Support/Autherius/SpiderFoot`. Optional SpiderFoot modules may report that API keys are missing; those modules cannot return results until configured with their respective keys.
+
+Phone searches use a small set of relevant modules to avoid starting unrelated scans. Offline checks can identify country and, when available, carrier information. SpiderFoot's built-in CallerName lookup only supports US `+1` numbers; richer international reverse lookups require configuring third-party modules and their API credentials.
+
+Full-name searches use SpiderFoot's Account Finder module rather than its entire passive module set. Autherius also raises SpiderFoot's soft open-file limit when the operating system permits it, and the Account Finder is capped at three internal workers to reduce file descriptor exhaustion.
+
+After a SpiderFoot scan, Autherius displays every related finding with its type, data, source module, related event, and any URL included by the source. It omits the seed event, which only repeats the original search target, and summarizes missing API keys or storage errors separately.
+
+Username searches print each claimed profile with its URL, account type, extracted data fields, and source site. A full JSON report is saved under the user's Autherius application data directory in `MaigretReports/`.
 
 Advanced Maigret CLI options are available with:
 
